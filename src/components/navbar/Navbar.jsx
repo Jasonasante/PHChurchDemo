@@ -1,15 +1,25 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Navbar.css'
 import { NavLink, Link } from 'react-router-dom'
 import PHCLogo from '../assets/logos/phcLogo.png'
 
 export const Navbar = () => {
+  const [menuOpen, setMenuOpen]=useState(false)
+
+  function menuVisible(){
+    setMenuOpen((prev)=>!prev)
+  }
   // if no session login show sign/login buttons
   // else show profile pic button
   return (
     <nav className='top-navbar'>
       <Link to="/" className='title'><div><img src={PHCLogo} alt="church logo" />Potter's House Church</div></Link>
-      <ul>
+      <div className="menu" onClick={menuVisible}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul className={menuOpen ? "open":""}>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/read">Read</NavLink></li>
         <li><NavLink to="/sermons">Sermons</NavLink></li>
