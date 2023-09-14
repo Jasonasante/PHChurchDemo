@@ -1,60 +1,55 @@
 .video-responsive {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.5rem;
-    width: 100%;
-    aspect-ratio: 1/0.5;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  aspect-ratio: 1/0.5;
 }
 
 iframe {
-    min-width: 321px;
-    margin: 0;
-    border-radius: 2rem;
+  min-width: 321px;
+  margin: 0;
+  border-radius: 2rem;
 }
 
 .recent-sermon-info {
-    font-family: 'ADLaM Display';
+  font-family: 'ADLaM Display';
 }
 
 .recent-sermon-info h4 {
-    text-align: center;
+  text-align: center;
+}
+
+.recent-sermon-embed {
+  width: "100%";
+  animation: var(--fadeIn) 3s;
 }
 
 .video-responsive .spinner {
-    width: 100%;
-    min-width: 321px;
-    height: 100%;
-    position: relative;
-    background-color: var(--color-bg-variant);
-    border-radius: 2rem;
-  }
-  
-  .simple-spinner {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  
-  }
-  
-  .simple-spinner span {
-    display: block;
-    width: 30px;
-    height: 30px;
-    border: 3px solid transparent;
-    border-radius: 50%;
-    border-right-color: var(--color-primary);
-    animation: spinner-anim 0.8s linear infinite;
-  }
-  
-  @keyframes spinner-anim {
-    from {
-      transform: rotate(0);
-    }
-  
-    to {
-      transform: rotate(360deg);
-    }
-  }
+  width: 100%;
+  min-width: 321px;
+  height: 100%;
+  position: relative;
+  background-color: var(--color-bg-variant);
+  border-radius: 2rem;
+}
+
+.video-responsive .simple-spinner {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.video-responsive .simple-spinner span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  border-right-color: var(--color-primary);
+  animation: spinner-anim 0.8s linear infinite;
+}

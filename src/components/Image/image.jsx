@@ -8,19 +8,12 @@ export function ImageWithLoader({ src, identifier }) {
     return (
         <div className='img-container' key={identifier} style={
             {
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                width: "100%",
                 "aspectRatio": loading ? "1/1" : "",
-
             }
         } >
             <img src={src} alt="" style={
                 {
                     display: loading ? "none" : "block",
-                    width: "100%",
-                    animation: "fadeIn 0.5s",
                 }
             } onLoad={(e) => { setLoading(false) }} ></img>
             {loading &&

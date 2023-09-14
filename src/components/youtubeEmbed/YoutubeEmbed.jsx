@@ -33,15 +33,13 @@ const YoutubeEmbed = ({ embedId }) => {
               <span></span>
             </div>
           </div>}
-        <iframe
+        <iframe className='recent-sermon-embed'
           src={`https://www.youtube.com/embed/${embedId}`}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           title="Embedded youtube"
           style={{
             display: loading ? "none" : "block",
-            width: "100%",
-            animation: "fadeIn 0.5s",
           }}
           onLoad={(e) => { setLoading(false) }}
         />

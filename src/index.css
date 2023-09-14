@@ -33,7 +33,9 @@ body::-webkit-scrollbar {
   --container-width-lg: 75%;
   --container-width-md: 86%;
   --container-width-sm: 90%;
-  --transition: all 400ms ease-in-out
+  --transition: all 400ms ease-in-out;
+  --fadeIn: fadeIn;
+  --spinner: spinner-anim;
 }
 
 #root {
@@ -100,3 +102,33 @@ body::-webkit-scrollbar {
 }
 
 @media screen and (max-width:400px) {}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes spinner-anim {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
