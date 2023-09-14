@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './YoutubeEmbed.css'
 
 const YoutubeEmbed = ({ embedId }) => {
+  const [loading, setLoading] = useState(true);
   const [videoTitle, setVideoTitle] = useState(null)
   useEffect(() => {
     const embedUrl = `https://www.youtube.com/embed/${embedId}`;
@@ -24,11 +25,25 @@ const YoutubeEmbed = ({ embedId }) => {
   return (
     <>
       <div className="video-responsive">
+        {loading &&
+          <div className="spinner" style={{
+            display: loading ? "block" : "none",
+          }} >
+            <div className="simple-spinner">
+              <span></span>
+            </div>
+          </div>}
         <iframe
           src={`https://www.youtube.com/embed/${embedId}`}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           title="Embedded youtube"
+          style={{
+            display: loading ? "none" : "block",
+            width: "100%",
+            animation: "fadeIn 0.5s",
+          }}
+          onLoad={(e) => { setLoading(false) }}
         />
       </div>
       <div className="recent-sermon-info">

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './recentSermons.css'
-import ImageWithLoader from '../Image/image'
 import { DateConversion } from '../misc'
 import YoutubeEmbed from '../youtubeEmbed/YoutubeEmbed'
 

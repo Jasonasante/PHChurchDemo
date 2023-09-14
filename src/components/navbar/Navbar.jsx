@@ -1,13 +1,19 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './Navbar.css'
 import { NavLink, Link } from 'react-router-dom'
 import PHCLogo from '../../assets/logos/phcLogo.png'
+import { IoMegaphoneOutline } from 'react-icons/io5'
+import { MdEvent } from 'react-icons/md'
+import { AiOutlineRead, AiOutlineHome } from 'react-icons/ai'
+import { BiVideoRecording } from 'react-icons/bi'
+import { BsInfoCircle } from 'react-icons/bs'
+import { FiLogIn } from 'react-icons/fi'
 
 export const Navbar = () => {
-  const [menuOpen, setMenuOpen]=useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
-  function menuVisible(){
-    setMenuOpen((prev)=>!prev)
+  function menuVisible() {
+    setMenuOpen((prev) => !prev)
   }
   // if no session login show sign/login buttons
   // else show profile pic button
@@ -19,15 +25,15 @@ export const Navbar = () => {
         <span></span>
         <span></span>
       </div>
-      <ul className={menuOpen ? "open":""}>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/read">Read</NavLink></li>
-        <li><NavLink to="/sermons">Sermons</NavLink></li>
-        <li><NavLink to="/events">Events</NavLink></li>
-        <li><NavLink to="/testimonies">Testimonies</NavLink></li>
-        <li><NavLink to="/about">About</NavLink></li>
+      <ul className={menuOpen ? "open" : ""}>
+        <li><NavLink to="/"><AiOutlineHome className="nav-icon" /> {menuOpen ? "Home" : null}</NavLink></li>
+        <li><NavLink to="/read"><AiOutlineRead className="nav-icon" />{menuOpen ? "Read" : null}</NavLink></li>
+        <li><NavLink to="/sermons"><BiVideoRecording className="nav-icon" />{menuOpen ? "Sermons" : null}</NavLink></li>
+        <li><NavLink to="/events"><MdEvent className="nav-icon" />{menuOpen ? "Events" : null}</NavLink></li>
+        <li><NavLink to="/testimonies"><IoMegaphoneOutline className="nav-icon" /> {menuOpen ? "Testimonies" : null}</NavLink></li>
+        <li><NavLink to="/about"><BsInfoCircle className="nav-icon" /> {menuOpen ? "About" : null}</NavLink></li>
         <li><NavLink to="/sign-up">Sign Up</NavLink></li>
-        <li><NavLink to="/login">Login</NavLink></li>
+        <li><NavLink to="/login">Login </NavLink></li>
       </ul>
     </nav>
   )
