@@ -1,0 +1,16 @@
+.video-responsive {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+
+}
+
+iframe {
+    min-width: 321px;
+    margin: 0;
+    border-radius: 2rem;
+}
+
+.recent-sermon-info {
+    font-family: 'ADLaM Display';
+}

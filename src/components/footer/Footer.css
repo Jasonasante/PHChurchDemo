@@ -42,3 +42,25 @@
 .footer ul li a:hover {
     text-decoration: underline;
 }
+
+@media screen and (max-width:800px) {
+    .footer ul {
+        font-size: 0.7rem;
+        padding: 0rem 1rem;
+    }
+
+    .footer ul li button {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .footer ul {
+        font-size: 0.6rem;
+        padding: 0rem 0.5rem;
+    }
+
+    .footer ul li button {
+        font-size: 0.6rem;
+    }
+}

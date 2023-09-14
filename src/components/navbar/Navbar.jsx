@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import './Navbar.css'
 import { NavLink, Link } from 'react-router-dom'
-import PHCLogo from '../assets/logos/phcLogo.png'
+import PHCLogo from '../../assets/logos/phcLogo.png'
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen]=useState(false)

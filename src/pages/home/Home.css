@@ -1,0 +1,10 @@
+.home {
+    display: grid;
+    grid-template-areas:
+        "events events events posts"
+        "sermons FAQs groups posts"
+    ;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 40% 60%;
+    gap: 0.5rem;
+}
