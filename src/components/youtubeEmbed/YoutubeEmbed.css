@@ -21,7 +21,7 @@ iframe {
 }
 
 .recent-sermon-embed {
-  width: "100%";
+  width: 100%;
   animation: var(--fadeIn) 3s;
 }
 

@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Footer.css'
 
 export const Footer = () => {
   return (
-    <div className='footer'>
+    <div id='footer'>
       <ul>
         <li >
           <button type="button">Connect With Us</button>

@@ -7,7 +7,7 @@ import { MdEvent } from 'react-icons/md'
 import { AiOutlineRead, AiOutlineHome } from 'react-icons/ai'
 import { BiVideoRecording } from 'react-icons/bi'
 import { BsInfoCircle } from 'react-icons/bs'
-import { FiLogIn } from 'react-icons/fi'
+import { FaPeopleGroup } from 'react-icons/fa6'
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -30,6 +30,7 @@ export const Navbar = () => {
         <li><NavLink to="/read"><AiOutlineRead className="nav-icon" />{menuOpen ? "Read" : null}</NavLink></li>
         <li><NavLink to="/sermons"><BiVideoRecording className="nav-icon" />{menuOpen ? "Sermons" : null}</NavLink></li>
         <li><NavLink to="/events"><MdEvent className="nav-icon" />{menuOpen ? "Events" : null}</NavLink></li>
+        <li><NavLink to="/community"><FaPeopleGroup className="nav-icon" />{menuOpen ? "Community" : null}</NavLink></li>
         <li><NavLink to="/testimonies"><IoMegaphoneOutline className="nav-icon" /> {menuOpen ? "Testimonies" : null}</NavLink></li>
         <li><NavLink to="/about"><BsInfoCircle className="nav-icon" /> {menuOpen ? "About" : null}</NavLink></li>
         <li><NavLink to="/sign-up">Sign Up</NavLink></li>

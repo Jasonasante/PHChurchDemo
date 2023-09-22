@@ -1,18 +1,23 @@
 .events-slider-container {
-    grid-area: events;
+    /* grid-area: events; */
     width: 100%;
-    height: 100%;
+    height: 50%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: -1;
+    margin-bottom: 3rem;
+}
+
+.events-slider-container h2 {
+    color: var(--color-primary) ;
+
 }
 
 .events-slider {
     width: 100%;
     height: 90%;
     padding: 0rem 1rem;
-
 }
 
 .mySwiper {
@@ -47,14 +52,14 @@
 }
 
 @media screen and (max-width:1024px) {
-    .gd-slider-container {
+    .events-slider-container {
         width: 90%;
         height: 40vh;
     }
 }
 
 @media screen and (max-width:600px) {
-    .gd-slider-container {
+    .events-slider-container {
         width: 90%;
         height: 10vh;
     }

@@ -3,15 +3,15 @@ import { useState } from 'react';
 import './image.css'
 
 
-export function ImageWithLoader({ src, identifier }) {
+export function ImageWithLoader({ nme, src, identifier }) {
     const [loading, setLoading] = useState(true);
     return (
-        <div className='img-container' key={identifier} style={
+        <div className={`img-container ${nme}`} key={identifier} style={
             {
                 "aspectRatio": loading ? "1/1" : "",
             }
         } >
-            <img src={src} alt="" style={
+            <img src={src} alt="" loading='lazy' style={
                 {
                     display: loading ? "none" : "block",
                 }

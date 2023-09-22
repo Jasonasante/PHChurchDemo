@@ -1,0 +1,48 @@
+.church-values {
+    width: 100%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 25%);
+    gap: 1rem;
+    padding: 0rem 1rem;
+    justify-content: center;
+}
+
+.church-values-container h2 {
+    margin-bottom: 2rem;
+}
+
+.church-values-container h5 {
+    color: var(--color-light);
+}
+
+.church-value-container {
+    width: 100%;
+    aspect-ratio: 2/1;
+    /* height: calc(100% - 1rem); */
+}
+
+.church-value {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    position: relative;
+    border-radius: 2rem;
+    border: solid 3px var(--color-primary);
+    background-size: cover;
+}
+
+.church-value-container .title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-primary);
+    font-family: 'ADLaM Display';
+    color: var(--color-white);
+    font-size: x-large;
+    padding: 0.5rem 1rem;
+    text-align: center;
+}
