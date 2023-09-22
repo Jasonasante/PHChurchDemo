@@ -18,6 +18,7 @@ export const Home = () => {
         <div className="church-values-container">
           <h5>we aim to</h5>
           <h2>Our Mission</h2>
+          <p>The Potter's House Church Wandsworth is a Bible-based, Spirit-filled, Non-denominational church passionate about spreading the Gospel of Jesus Christ. We are a dynamic and diverse community of people who want to live our lives in the way that Jesus did and that is by: Loving God, Loving People and Serving Others.</p>
           <div className="church-values">
             <ChurchValues value="Reach The Lost" src="https://cdn.churchleaders.com/wp-content/uploads/files/article_images/11.16.ReachingtheReceptive_877419044.jpg" />
             <ChurchValues value="Make Disciples" src="https://www.heroesbibletrivia.org/wp-content/uploads/2022/01/judas-1-1-1024x576.jpg" />
@@ -47,9 +48,6 @@ export const Home = () => {
         </div> */}
 
       </div>
-      {/* <div className="home-posts-container">
-        Home
-      </div> */}
     </section>
   )
 }

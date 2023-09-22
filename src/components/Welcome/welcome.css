@@ -19,28 +19,30 @@
     margin-top: 1rem;
 }
 
-.we-are .img-container{
+.we-are .img-container {
     height: 60%;
     transform: translate(-5%);
 }
 
-.church-service-info{
+.church-service-info {
     width: max-content;
     padding-top: 2rem;
     padding-bottom: 1rem;
     border-top: 1px solid var(--color-primary);
 }
-.church-service-info .location{
+
+.church-service-info .location {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.church-service-info .time{
+.church-service-info .time {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
+
 .welcome-gallery {
     width: 100%;
     display: flex;
@@ -56,11 +58,14 @@
 .welcome-gallery .row {
     flex: 0 0 40%;
     max-width: 40%;
+
 }
 
 .welcome-gallery .row .img-container {
     padding: 0.5rem;
     padding-right: 0;
+    overflow: hidden;
+
 }
 
 .welcome-gallery .row .p-1 {
@@ -70,6 +75,7 @@
 .welcome-gallery>.row>.p-2 {
     height: 200px;
 }
+
 .welcome-gallery .row .p-3 {
     padding-top: 4rem;
 }
