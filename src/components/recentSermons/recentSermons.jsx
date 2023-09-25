@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './recentSermons.css'
 import { DateConversion } from '../misc'
 import YoutubeEmbed from '../youtubeEmbed/YoutubeEmbed'
+import { NavLink } from 'react-router-dom'
 
 const RecentSermons = () => {
     const [recentSermons, setRecentSermons] = useState(null)
@@ -49,13 +50,11 @@ const RecentSermons = () => {
                         <article className='recent-sermon' key="Hnq-Km7bPsQ">
                             <YoutubeEmbed embedId="Hnq-Km7bPsQ" />
                         </article>
-                        {/* <article className='recent-sermon' key="lOOrGfnz0fM">
-                            <YoutubeEmbed embedId="lOOrGfnz0fM" />
-                        </article> */}
                     </>
                 )
                 }
             </div>
+            <NavLink to="/sermons" className="btn"> See More...</NavLink>
         </section>
     )
 }

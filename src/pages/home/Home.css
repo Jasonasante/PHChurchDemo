@@ -1,4 +1,4 @@
-#home {}
+/* #home {} */
 
 .home-container {
     width: 100%;
@@ -15,15 +15,22 @@
     padding: 0rem 1rem;
 }
 
-.church-values-container {
-    width: 100%;
-    height: 100%;
+.read-testimonies-container{
     text-align: center;
-    color: var(--color-primary);
-    background-color: rgb(234, 234, 234);
+    margin: 2rem 0;
 }
 
-.church-values-container p {
-    color: var(--color-bg-variant);
+.read-testimonies-container h2{
     margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.read-testimonies-container h5{
+    /* margin-bottom: 1rem; */
+    color: var(--color-light);
+    margin: 0;
+}
+
+.read-testimonies-container p{
+    margin: 1rem;
 }

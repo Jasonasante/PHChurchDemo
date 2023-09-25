@@ -12,14 +12,17 @@ const EventsSlider = () => {
   return (
     <div className="events-slider">
       <Swiper
-        slidesPerView={1}
         spaceBetween={30}
-        loop={true}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         pagination={{
           clickable: true,
         }}
         navigation={true}
-        modules={[Pagination, Navigation]}
+        modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
         <SwiperSlide><ImageWithLoader nme="" src={Evangelism} /></SwiperSlide>

@@ -7,7 +7,7 @@ const YoutubeEmbed = ({ embedId }) => {
   useEffect(() => {
     const embedUrl = `https://www.youtube.com/embed/${embedId}`;
 
-    const videoId = embedUrl.match(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+    const videoId = embedUrl.match(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
 
     if (videoId) {
       const apiUrl = `https://noembed.com/embed?url=https://www.youtube.com/watch?v=${videoId[1]}`;
@@ -21,7 +21,7 @@ const YoutubeEmbed = ({ embedId }) => {
           console.error('Error fetching video data:', error);
         });
     }
-  }, [videoTitle]);
+  });
   return (
     <>
       <div className="video-responsive">
