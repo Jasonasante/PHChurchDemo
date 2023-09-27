@@ -1,0 +1,24 @@
+.image-location {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.view-image-container {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    max-height: 100px;
+}
+
+.view-image-container img {
+    object-fit: cover;
+    border: 3px solid var(--color-primary);
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+}
+
+.add-image {
+    width: 95%;
+}

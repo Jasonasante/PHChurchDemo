@@ -16,7 +16,7 @@ function App() {
         <Route path="/community" element={<Community />} />
         <Route path="/testimonies" element={<Testimonies />} />
         <Route path="/about" element={<About />} />
-        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/register" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
       </Routes>
       <Footer />

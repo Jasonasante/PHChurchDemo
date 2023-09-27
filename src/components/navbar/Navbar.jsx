@@ -33,7 +33,7 @@ export const Navbar = () => {
         <li><NavLink to="/community"><FaPeopleGroup className="nav-icon" />{menuOpen ? "Community" : null}</NavLink></li>
         <li><NavLink to="/testimonies"><IoMegaphoneOutline className="nav-icon" /> {menuOpen ? "Testimonies" : null}</NavLink></li>
         <li><NavLink to="/about"><BsInfoCircle className="nav-icon" /> {menuOpen ? "About" : null}</NavLink></li>
-        <li><NavLink to="/sign-up">Sign Up</NavLink></li>
+        <li><NavLink to="/register">Sign Up</NavLink></li>
         <li><NavLink to="/login">Login </NavLink></li>
       </ul>
     </nav>

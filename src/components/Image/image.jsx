@@ -11,7 +11,7 @@ export function ImageWithLoader({ nme, src, identifier }) {
                 "aspectRatio": loading ? "1/1" : "",
             }
         } >
-            <img src={src} alt="" loading='lazy' style={
+            <img src={src} alt="" style={
                 {
                     display: loading ? "none" : "block",
                 }
