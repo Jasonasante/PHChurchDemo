@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Navbar.css'
 import { NavLink, Link } from 'react-router-dom'
-import PHCLogo from '../../assets/logos/phcLogo.png'
+import PHCLogo from '../../../public/assets/logos/phcLogo.png'
 import { IoMegaphoneOutline } from 'react-icons/io5'
 import { MdEvent } from 'react-icons/md'
 import { AiOutlineRead, AiOutlineHome } from 'react-icons/ai'

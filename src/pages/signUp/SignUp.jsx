@@ -14,7 +14,7 @@ export const SignUp = () => {
     let values = Object.fromEntries(data.entries())
     values["avatar"] = localImage
     console.log({ values });
-    console.log(localImage)
+    // console.log(localImage)
   }
   return (
     <section className='register-container'>

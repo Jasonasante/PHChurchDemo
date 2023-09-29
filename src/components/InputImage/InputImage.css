@@ -22,3 +22,8 @@
 .add-image {
     width: 95%;
 }
+
+.image-location .error-message {
+    color: red;
+    font-size: small;
+}

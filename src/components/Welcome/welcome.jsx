@@ -1,6 +1,5 @@
 import React from 'react'
 import './welcome.css'
-import ImageWithLoader from '../Image/image'
 import PHCText from '../../assets/logos/phcText.png'
 
 const Welcome = () => {

@@ -5,6 +5,7 @@ const InputImage = ({ setLocalImage }) => {
     const [local, setLocal] = useState(false)
     const [urlImage, setUrlImage] = useState("")
     const [selectedImage, setSelectedImage] = useState(null)
+    const [error, setError] = useState("")
 
     function handleChange(location) {
         setLocalImage("")
@@ -16,6 +17,11 @@ const InputImage = ({ setLocalImage }) => {
             setSelectedImage(null)
             setLocal(false)
         }
+    }
+
+    function addErrorMessage(message) {
+        setError(message)
+        setTimeout(() => setError(""), 10000)
     }
 
 
@@ -43,16 +49,25 @@ const InputImage = ({ setLocalImage }) => {
                         </div>}
                     <div className="add-image">
                         <input type="file" className='form-input view-image' onChange={(e) => {
-                            if (e.target.files[0].size < 20000000) {
-                                setSelectedImage(e.target.files[0])
-                                const fileReader = new FileReader();
-                                fileReader.onload = function (e) {
-                                    setLocalImage(e.target.result);
-                                };
-                                fileReader.readAsDataURL(e.target.files[0]);
+                            const allowedTypes = ['image/png', 'image/jpeg', 'image/jpg', 'video/mp4', 'image/gif'];
+                            const file = e.target.files[0]
+                            if (file && allowedTypes.includes(file.type)) {
+                                if (file.size < 20000000) {
+                                    setSelectedImage(file)
+                                    const fileReader = new FileReader();
+                                    fileReader.onload = function (e) {
+                                        setLocalImage(e.target.result);
+                                    };
+                                    fileReader.readAsDataURL(file);
+                                } else {
+                                    addErrorMessage("file too big")
+                                }
+                            } else {
+                                addErrorMessage("Invalid type")
                             }
                             ;
                         }} />
+
                     </div>
                 </>
             ) : (
@@ -76,6 +91,9 @@ const InputImage = ({ setLocalImage }) => {
                 </>
             )}
             <p>File Must Not Exceed 20MB</p>
+            {error &&
+                <p className='error-message'>{error}</p>
+            }
         </>
     )
 }
